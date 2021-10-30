@@ -5,19 +5,19 @@ module.exports = {
    
      await queryInterface.bulkInsert('skills', [{
        skillname: 'HTML/CSS',
-       category: 'Desenvolvimento WEB'
+       category: 'Desenvolvimento Web'
      },
     {
       skillname:'Javascript',
-      category: 'desenvolvimento WEB'
+      category: 'Desenvolvimento Web'
     },
     {
       skillname:'React',
-      category: 'desenvolvimento WEB'
+      category: 'Desenvolvimento WEB'
     },
     {
       skillname:'Node.js',
-      category: 'desenvolvimento WEB'
+      category: 'Desenvolvimento Web'
     },
     {
       skillname:'C',
@@ -35,7 +35,7 @@ module.exports = {
       category: 'Programação'
     },{
       skillname:'SASS',
-      category: 'Desenvolvimento WEB'
+      category: 'Desenvolvimento Web'
     },{
       skillname:'UX/UI',
       category: 'Design'
@@ -95,6 +95,10 @@ module.exports = {
     {
       skillname:'matlab',
       category: 'Data Science'
+    },
+    {
+      skillname:'Laravel',
+      category: 'Desenvolvimento Web'
     },
   ], {});
     
