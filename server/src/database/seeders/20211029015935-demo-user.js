@@ -5,6 +5,7 @@ module.exports = {
     
       return queryInterface.bulkInsert('users', [
         {
+          
           perfil: "admin",
           nome: "Saulo Freitas",
           email:"saulofreitas01@gmail.com",
@@ -15,6 +16,7 @@ module.exports = {
         }
         ,
         {
+            
         perfil: "user",  
         nome: "Carlos Lacerda" ,
         email: "carloslacerda@mail.com",

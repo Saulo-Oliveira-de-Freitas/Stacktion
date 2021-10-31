@@ -10,7 +10,8 @@ module.exports = {
       },
       
       skillname: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        unique: true
       },
       category: {
         type: Sequelize.STRING
