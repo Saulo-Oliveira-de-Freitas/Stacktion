@@ -8,5 +8,6 @@ router.get('/users',UserController.getUsers)
 
 router.get('/users/:id',UserController.getUser) 
 
+router.post('/users/',UserController.createUser)
 
 module.exports = router
