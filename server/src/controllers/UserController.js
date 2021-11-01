@@ -41,6 +41,33 @@ class UserController{
             return res.status(500).json(error.message)
         }
     }
+
+
+    static async updateUser(req, res){
+        const newInfo = req.body
+        const {id }= req.params
+        try {
+            await database.users.update(newInfo,{where : 
+                {id: Number(id)}})
+                const updatedUser = await database.users.findOne({where : {id: Number(id)}})
+                return res.status(200).json(updatedUser)
+        } catch (error) {
+            return res.status(500).json(error.message)
+
+        }
+
+    }
+
+
+    static async deleteUser(){
+        const {id } = req.params
+        try {
+            await database.users.destroy({where : {id: Number(id)}})
+            return res.status(200).json({message: `id ${id} deletado`})
+        } catch (error) {
+            return res.status(500).json(error.message)
+        }
+    }
 }
 
 module.exports = UserController
