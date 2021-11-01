@@ -1,10 +1,9 @@
-const app = require("..");
+
 const express = require('express')
-const users = require ('../database/models')
+const users = require ('./usersRoute')
 
 module.exports = app =>{
     app.use(express.json())
-    app.get('/',(req,res)=>{
-        console.log('oi')
-    })
+    app.use(users)
+   
 }
