@@ -11,10 +11,11 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      cliente.hasMany(models.projetos,{through: 'clienteProjeto',foreignKey: 'clienteId'})
     }
   };
   cliente.init({
-    
+    clienteId: DataTypes.STRING,
     nome: DataTypes.STRING,
     email: DataTypes.STRING,
     senha: DataTypes.STRING,

@@ -5,7 +5,8 @@ module.exports = (sequelize, DataTypes) => {
     category: DataTypes.STRING
   }, {});
   skills.associate = function(models) {
-    // associations can be defined here
+   
+   skills.belongsToMany(models.devs, {through: 'devSkills',foreignKey: 'skillId'})
   };
   return skills;
 };
