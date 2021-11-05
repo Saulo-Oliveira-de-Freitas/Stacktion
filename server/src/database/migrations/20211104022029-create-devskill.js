@@ -19,6 +19,10 @@ module.exports = {
         references: {model: "skills", key: "id"}
 
       },
+      skillLevel:{
+        type: Sequelize.STRING,
+        allowNull: false
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

@@ -6,7 +6,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
   skills.associate = function(models) {
    
-   skills.belongsToMany(models.devs, {through: 'devSkills',foreignKey: 'skillId'})
+   skills.belongsToMany(models.devs, {through: 'devskills',foreignKey: 'skillId'})
   };
   return skills;
 };

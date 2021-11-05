@@ -1,38 +1,42 @@
-'use strict';
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     
-      await queryInterface.bulkInsert('Projetos', [{
-       nome: "Projeto App de Entrega",
-       inicio:"",
-       createdAt: newDate(),
-       updatedAt: newDate()
-      },
+      await queryInterface.bulkInsert('projetos', [
       {
-        nome: "",
-        inicio:"",
-        createdAt: newDate(),
-        updatedAt: newDate()
+       nome: "Projeto App de Entrega",
+       inicio:new Date(),
+       createdAt: new Date(),
+       updatedAt: new Date()
+      },
+
+      {
+        nome: "ultra app mindset uber coach",
+        inicio:new Date(),
+        createdAt: new Date(),
+        updatedAt: new Date()
        },
+
        {
-        nome: "",
-        inicio:"",
-        createdAt: newDate(),
-        updatedAt: newDate()
+        nome: "mecearia do marco",
+        inicio:new Date(),
+        createdAt: new Date(),
+        updatedAt: new Date()
        },
+
        {
-        nome: "",
-        inicio:"",
-        createdAt: newDate(),
-        updatedAt: newDate()
+        nome: "pagina tech recruiter",
+        inicio:new Date(),
+        createdAt: new Date(),
+        updatedAt: new Date()
        }
+       
     ], {});
     
   },
 
   down: async (queryInterface, Sequelize) => {
     
-    await queryInterface.bulkDelete('People', null, {});
+    await queryInterface.bulkDelete('projetos', null, {});
   }
 };

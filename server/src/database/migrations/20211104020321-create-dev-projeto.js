@@ -13,7 +13,7 @@ module.exports = {
         type: Sequelize.INTEGER,
         references: {model: "devs", key: "id"}
       },
-      projetosId: {
+      projetoId: {
         primaryKey: true,
         type: Sequelize.INTEGER,
         references: {model: "projetos", key: "id"}
