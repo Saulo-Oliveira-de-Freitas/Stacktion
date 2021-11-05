@@ -4,6 +4,6 @@ const DevController = require('../controllers/DevController')
 
 const router = Router()
 
-router.post('/users/', DevController.createDevs)
+router.post('/cadastro/dev', DevController.createDevs)
 
 module.exports = router

@@ -1,10 +1,11 @@
 const database = require('../models')
+const bcrypt = require('bcrypt')
 
 class DevController{
     static async selectAllDevs (req, res){
         try {
-        const allUsers = await database.devs.findAll()
-        return res.status(200).json(allUsers) 
+        const allDevs = await database.devs.findAll()
+        return res.status(200).json(allDevs) 
             }
         catch(error){
             return res.status(500).json(error.message)
@@ -25,13 +26,19 @@ class DevController{
     static async createDevs (req, res){
         const newUsers = req.body
         try {
-            const newUsersOk = await database.devs.create(newUsers)
+            const senhaHash = await DevController.hasher(newUsers.senha)
+            const newUsersOk = await database.devs.create({...newUsers,senha:senhaHash})
             return res.status(200).json(newUsersOk)
             
         }
         catch(error){
             return res.status(500).json(error.message)
         }
+    }
+
+    static async hasher(senha){
+        const custo = 12;
+        return bcrypt.hash(senha, custo);
     }
 
     static async updateDevs (req, res){
