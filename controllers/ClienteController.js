@@ -1,31 +1,32 @@
 const database = require('../models')
-
+const bcrypt = require('bcrypt')
 class ClienteController{
-    static async selectAllProjetos (req, res){
+    static async selectAllClientes (req, res){
         try {
-        const allProjetos = await database.projetos.findAll()
-        return res.status(200).json(allProjetos) 
+        const allClientes = await database.cliente.findAll()
+        return res.status(200).json(allClientes) 
             }
         catch(error){
             return res.status(500).json(error.message)
         }
     }
 
-    static async selectOneProjetos (req, res){
+    static async selectOneClientes (req, res){
         const {id} = req.params
         try {
-            const oneProjetos = await database.projetos.findOne( {where: { id : id }})
-            return res.status(200).json(oneClientes)            
+            const oneCliente = await database.cliente.findOne( {where: { id : id }})
+            return res.status(200).json(oneCliente)            
         }
         catch(error){
             return res.status(500).json(error.message)
         }
     }
 
-    static async createProject(req, res){
+    static async createClientes(req, res){
         const newCliente = req.body
         try {
-            const newClienteCreated = await database.clientes.create(newCliente)
+            const senhaHash = await DevController.hasher(newCliente.senha)
+            const newClienteCreated = await database.cliente.create({...newCliente,senha:senhaHash})
             return res.status(200).json(newClienteCreated)
             
         }
@@ -38,8 +39,8 @@ class ClienteController{
         const {id} = req.params
         const newUpdate = req.body
         try {
-            await database.clientes.update(newUpdate, {where: { id : id }} )
-            const updatedCliente = await database.clientes.findOne( {where: { id : id }})
+            await database.cliente.update(newUpdate, {where: { id : id }} )
+            const updatedCliente = await database.cliente.findOne( {where: { id : id }})
             return res.status(200).json(updatedCliente)            
         }
         catch(error){
@@ -50,7 +51,7 @@ class ClienteController{
     static async deleteClientes (req, res){
         const {id} = req.params
         try {
-            await database.clientes.destroy({where: { id : id }})
+            await database.cliente.destroy({where: { id : id }})
             return res.status(200).json({alert: `Cliente ${id} deletado`})            
         }
         catch(error){
