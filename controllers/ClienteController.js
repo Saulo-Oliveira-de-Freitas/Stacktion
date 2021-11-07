@@ -21,6 +21,11 @@ class ClienteController{
             return res.status(500).json(error.message)
         }
     }
+    static async hasher(senha){
+        const custo = 12;
+        return bcrypt.hash(senha, custo);
+    }
+
 
     static async createClientes(req, res){
         const newCliente = req.body
