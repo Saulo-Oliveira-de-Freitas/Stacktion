@@ -46,7 +46,7 @@ function TeacherForm() {
     return (
         <div id="page-teacher-form" className="container">
             <PageHeader 
-                title="Que incrível que você quer dar aulas." 
+                title="Bem vindo à Stacktion!" 
                 description="O primeiro passo é preencher esse formulário de inscrição"
             />
 
@@ -92,7 +92,7 @@ function TeacherForm() {
 
                         <Textarea 
                             name="bio" 
-                            label="Biografia"
+                            label="Biografia (fale um pouco sobre você)"
                             value={bio} 
                             onChange={(e) => {
                                 setBio(e.target.value)

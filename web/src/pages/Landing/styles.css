@@ -61,20 +61,14 @@
 }
 
 .buttons-container a.study {
-    background: var(--color-primary-lighter);
+    background: var(--color-secundary-dark);
 }
 
 .buttons-container a.give-classes {
     background: var(--color-secundary);
 }
 
-.buttons-container a.study:hover {
-    background: var(--color-primary-light);
-}
 
-.buttons-container a.give-classes:hover {
-    background: var(--color-secundary-dark);
-}
 
 .total-connections {
     font-size: 1.4rem;
