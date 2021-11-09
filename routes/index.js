@@ -15,4 +15,5 @@ module.exports = app =>{
     app.use(devPerfil)
     app.use(clienteCadastro)
     app.use(clientePerfil)
+    
 }

@@ -63,6 +63,11 @@ class ClienteController{
             return res.status(500).json(error.message)
         }
     }
+
+    static async login (req, res){
+        res.status(204).send();
+    }
+
 }
 
 module.exports = ClienteController;
