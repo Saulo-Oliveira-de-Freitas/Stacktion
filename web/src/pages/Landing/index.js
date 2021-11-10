@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import {Link} from 'react-router-dom'
 
 import logoImg from '../../assets/images/logo.svg';
-import landingImg from '../../assets/images/landing.svg';
+import heroImg from '../../assets/images/heroImg.svg';
 
 
 import purpleHeartIcon from '../../assets/images/icons/purple-heart.svg';
@@ -31,7 +31,7 @@ function Landing() {
                 </div>
 
                 <img 
-                    src={landingImg} 
+                    src={heroImg} 
                     alt="Plataforma de estudos" 
                     className="hero-img"
                 />
