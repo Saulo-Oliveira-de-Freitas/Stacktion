@@ -2,7 +2,7 @@ import React, { useState, FormEvent } from 'react';
 
 import PageHeader from '../../components/PageHeader';
 import Input from '../../components/Input';
-import TeacherItem, {Teacher} from '../../components/TeacherItem';
+import TeacherItem from '../../components/TeacherItem';
 import Select from '../../components/Select';
 
 import api from '../../services/api';
@@ -11,14 +11,14 @@ import './styles.css';
 
 
 
-function TeacherList() {
+function DevList() {
     const [teachers, setTeachers] = useState([])
 
     const [subject, setSubject] = useState('');
     const [week_day, setWeekDay] = useState('');
     const [time, setTime] = useState('');
 
-    async function searchTeacher(e: FormEvent) {
+    async function searchTeacher(e) {
         e.preventDefault();
 
         const response = await api.get('classes', {
@@ -90,7 +90,7 @@ function TeacherList() {
             </PageHeader>
 
             <main>
-                {teachers.map((teacher: Teacher) => {
+                {teachers.map((teacher) => {
                     return <TeacherItem key={teacher.id} teacher={teacher} />
                 })}
             </main>
@@ -98,4 +98,4 @@ function TeacherList() {
     )
 }
 
-export default TeacherList;
+export default DevList;

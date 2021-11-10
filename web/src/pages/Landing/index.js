@@ -4,8 +4,7 @@ import {Link} from 'react-router-dom'
 import logoImg from '../../assets/images/logo.svg';
 import landingImg from '../../assets/images/landing.svg';
 
-import studyIcon from '../../assets/images/icons/study.svg';
-import giveClassesIcon from '../../assets/images/icons/give-classes.svg';
+
 import purpleHeartIcon from '../../assets/images/icons/purple-heart.svg';
 
 import api from '../../services/api';
@@ -27,8 +26,8 @@ function Landing() {
         <div id="page-landing">
             <div id="page-landing-content" className="container">
                 <div className="logo-container">
-                    <img src={logoImg} alt="Proffy logo" />
-                    <h2>Sua plataforma de estudos online.</h2>
+                    <h1>Stacktion</h1>
+                    <h2>Sua plataforma de Freelancing online.</h2>
                 </div>
 
                 <img 
@@ -38,13 +37,11 @@ function Landing() {
                 />
 
                 <div className="buttons-container">
-                    <Link to="/study" className="study">
-                        <img src={studyIcon} alt="Estudar"/>
-                        Estudar
+                    <Link to="/Cliente" className="study">
+                        Quero Contratar
                     </Link>
-                    <Link to="/give-classes" className="give-classes">
-                        <img src={giveClassesIcon} alt="Estudar"/>
-                        Dar Aula
+                    <Link to="Login/Dev" className="give-classes">
+                        Quero Trabalhar
                     </Link>
                 </div>
 

@@ -11,8 +11,9 @@ import warningIcon from '../../assets/images/icons/warning.svg'
 
 import './styles.css';
 
-function TeacherForm() {
+function DevForm() {
     const history = useHistory();
+
 
     const [nome, setNome] = useState('');
     const [email, setEmail] = useState('');
@@ -21,7 +22,6 @@ function TeacherForm() {
     const [bio, setBio] = useState('');
     const [valor, setValor] = useState('');
 
-    
 
     function handleCreateClass(e) {
         e.preventDefault();
@@ -116,7 +116,7 @@ function TeacherForm() {
                             Importante! <br />
                             Preencha todos os dados
                         </p>
-                        <button type="submit">Salvar cadastro</button>
+                        <button type="submit" >Salvar cadastro</button>
                     </footer>
                 </form>
             </main>
@@ -124,4 +124,4 @@ function TeacherForm() {
     )
 }
 
-export default TeacherForm;
+export default DevForm;

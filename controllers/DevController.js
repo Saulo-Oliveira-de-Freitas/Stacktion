@@ -65,8 +65,8 @@ class DevController{
         }
     }
 
-    static async login (req, res){
-        res.status(204).send();
+    static async login(req,res){
+        res.status(204).send()
     }
 }
 
