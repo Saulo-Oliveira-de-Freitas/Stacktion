@@ -1,25 +1,20 @@
 import React, {useState, } from 'react';
 import axios from 'axios';
-
 import PageHeader from '../../components/PageHeader';
 import Input from '../../components/Input';
-
-
 import api from '../../services/api';
-
-
 
 import './styles.css';
 
-function LoginPage() {
+function RequestResetPage() {
     
     
     return(
         
         <div id="page-teacher-form" className="container">
         <PageHeader 
-            title="Login" 
-            
+            title="Esqueci minha senha" 
+            description="insira seu Email, se for um email válido, você receberá código de recuperação."
         />
 
         <main>
@@ -32,21 +27,13 @@ function LoginPage() {
                         label="Email"
                     
                        
-                    />    
-
-                    <Input 
-                        name="senha" 
-                        label="Senha"
-                         
+                    /> 
+                   
+                        <button className="FormButton" type="submit"> Recuperar Senha </button> 
                         
-                    />
-                    <a href="/requestreset" className= 'PasswordReset' > Esqueceu a senha? </a>
-                <footer>
-                <button  type="submit">Entrar</button>
-                <a href="/Dev" className= 'RegisterLink' >  Registre-se </a>
-                </footer>
-                
                 </fieldset>
+                  
+               
             </form>
     </main>
 </div>
@@ -54,4 +41,4 @@ function LoginPage() {
     )
 
 }
-export default LoginPage
+export default RequestResetPage

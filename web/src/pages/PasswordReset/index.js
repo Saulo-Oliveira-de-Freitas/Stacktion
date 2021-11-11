@@ -5,46 +5,39 @@ import PageHeader from '../../components/PageHeader';
 import Input from '../../components/Input';
 
 
-import api from '../../services/api';
-
 
 
 import './styles.css';
 
-function LoginPage() {
+function PasswordReset() {
     
     
     return(
         
         <div id="page-teacher-form" className="container">
         <PageHeader 
-            title="Login" 
+            title="Recuperação de senha" 
             
         />
 
         <main>
             <form >
                 <fieldset>
-                    <legend>Seus dados</legend>
+                    <legend>Cadastre sua nova senha</legend>
 
                     <Input 
-                        name="email" 
-                        label="Email"
+                        name="senha" 
+                        label="Nova senha"
                     
                        
                     />    
 
                     <Input 
-                        name="senha" 
-                        label="Senha"
-                         
-                        
+                        name="senhaConfirma" 
+                        label="Confirme a nova senha"
                     />
-                    <a href="/requestreset" className= 'PasswordReset' > Esqueceu a senha? </a>
-                <footer>
-                <button  type="submit">Entrar</button>
-                <a href="/Dev" className= 'RegisterLink' >  Registre-se </a>
-                </footer>
+                    <button  type="submit">Concluir</button> 
+               
                 
                 </fieldset>
             </form>
@@ -54,4 +47,4 @@ function LoginPage() {
     )
 
 }
-export default LoginPage
+export default PasswordReset

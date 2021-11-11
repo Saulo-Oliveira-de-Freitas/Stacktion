@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import {Link} from 'react-router-dom'
 
-import logoImg from '../../assets/images/logo.svg';
+
 import heroImg from '../../assets/images/heroImg.svg';
 
 
@@ -40,7 +40,7 @@ function Landing() {
                     <Link to="/Cliente" className="study">
                         Quero Contratar
                     </Link>
-                    <Link to="Login/Dev" className="give-classes">
+                    <Link to="/login" className="give-classes">
                         Quero Trabalhar
                     </Link>
                 </div>

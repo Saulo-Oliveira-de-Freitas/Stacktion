@@ -7,12 +7,8 @@ import backIcon from '../../assets/images/icons/back.svg';
 
 import './styles.css';
 
-interface PageHeaderProps {
-    title: string;
-    description?: string
-};
 
-const PageHeader: React.FunctionComponent<PageHeaderProps> = (props) => {
+const PageHeader = (props) => {
     return (
         <header className="page-header">
             <div className="top-bar-container">

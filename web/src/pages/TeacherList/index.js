@@ -34,11 +34,11 @@ function DevList() {
 
     return (
         <div id="page-teacher-list" className="container">
-            <PageHeader title="Estes são os proffys disponíveis.">
+            <PageHeader title="Estes são os devs disponíveis.">
                 <form id="search-teachers" onSubmit={searchTeacher}>
                     <Select 
                         name="subject" 
-                        label="Matéria"
+                        label="Categoria"
                         value={subject}
                         onChange={(e) => {
                             setSubject(e.target.value)
@@ -58,7 +58,7 @@ function DevList() {
                     />
                     <Select 
                         name="week_day" 
-                        label="Dia da semana"
+                        label="Skill"
                         value={week_day}
                         onChange={(e) => {
                             setWeekDay(e.target.value)
@@ -73,14 +73,16 @@ function DevList() {
                             {value: '6', label: 'Sábado'},
                         ]}    
                     />
-                    <Input 
-                        type="time" 
+                    <Select 
                         name="time" 
-                        label="Hora"
+                        label="Nível"
                         value={time}
                         onChange={(e) => {
                             setTime(e.target.value)
-                        }}
+                        }}options={[
+                        { value: '0', label: 'Junior'},
+                        {value: '1', label: 'Pleno'},
+                        {value: '2', label: 'Senior'}]}
                     />
 
                     <button type="submit">
