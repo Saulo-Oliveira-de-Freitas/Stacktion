@@ -66,7 +66,7 @@ class DevController{
     }
 
     static async login(req,res){
-        res.status(204).send()
+        res.status(204).send({message: 'logado com sucesso'})
     }
 }
 

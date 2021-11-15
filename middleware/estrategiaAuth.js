@@ -1,40 +1,76 @@
-const passport = require('passport')
-const LocalStrategy = require('passport-local').Strategy
+const passport = require('passport');
+const LocalStrategy = require('passport-local').Strategy;
 const bcrypt = require('bcrypt')
-const Dev = require('../models/devs')
+const database = require('../models')
 
-const estrategiaAuth = () =>{
+const customfields ={
+    usernameField: 'email',
+    passwordField: 'senha',
+}
 
-passport.use('local',new LocalStrategy({
-    usernameField:'email',
-    passwordField:'senha',
-    session: false
-    },async(email, senha, done) =>{
-        try {
-            const dev = await Dev.findOne( {where: { email : email }})    
-            verificaDev(dev);
-             await verificaSenha(senha, dev.senhaHash);
+const verifycallback = (email,senha,done) =>{
 
-            done(null,dev);
-        } catch (error) {
-            done(error)
+};
+const strategy = new LocalStrategy();
+
+
+class LoginControl {
+
+    constructor(){
+        passport.use('local',new LocalStrategy (
+            {
+            usernameField: 'email',
+            passwordField: 'senha',
+            session: false
+            },
+        
+            (email,senha,done) => {
+                try 
+                {
+                    database.devs.findOne( {where: { email : email }})
+                        .then(devs => {
+                            this.checkEmail(email)
+                            this.checkSenha(senha, devs.senha)
+                                .then(()=> done(null, email))
+                                .catch((error)=> done(error, email))
+                        }).catch((error)=> done(error))
+
+                }
+                catch (error) {
+                    done(error);
+                }
+        
+            }
+        ));
+        
+        passport.serializeUser(function(email, done) {
+            done(null, email.email);
+          });
+          
+          passport.deserializeUser(function(email, done) {
+            database.devs.findOne( {where: { email : email }}).then( email => {
+                done (null, email);
+            }).catch(err => done(err));
+          });
+    }
+
+    checkEmail(email){
+        if(!email){
+        throw new Error('Não há usuário com este email');
         }
     }
 
-))}
-
-
-function verificaDev(dev){
-    if(!dev){
-        throw new Error(' Usuário Inválido')
+    async checkSenha(senha, senhaHash){
+        const senhaOk = await bcrypt.compare(senha, senhaHash)
+        if(!senhaOk){
+            throw new Error('Senha Incorreta');
+        }
     }
+
+
+
+
 }
 
-async function verificaSenha(){
-    const senhaValida = await bcrypt.compare(senha,senhaHash);
-    if(!senhaValida){
-        throw new Error(' Email ou senha Inválidos')
-    }
-}
 
-module.exports = estrategiaAuth
+module.exports = LoginControl

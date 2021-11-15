@@ -8,6 +8,6 @@ passport.use(LocalStrategy)
 
 const router = Router()
 
-router.post('/dev/login',passport.authenticate('Local',{session:false}) ,DevController.login) 
+router.post('/dev/login', DevController.login) 
 
 module.exports = router

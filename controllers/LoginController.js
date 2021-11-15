@@ -5,7 +5,8 @@ const database = require('../models')
 
 
 
-class LoginControl {
+
+class LoginController {
 
     constructor(){
         passport.use('local',new LocalStrategy (
@@ -64,4 +65,4 @@ class LoginControl {
 }
 
 
-module.exports = LoginControl
+module.exports = LoginController
