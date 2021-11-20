@@ -19,7 +19,6 @@ function LoginPage() {
         <div id="page-teacher-form" className="container">
         <PageHeader 
             title="Login" 
-            
         />
 
         <main>
@@ -30,20 +29,15 @@ function LoginPage() {
                     <Input 
                         name="email" 
                         label="Email"
-                    
-                       
                     />    
-
                     <Input 
                         name="senha" 
                         label="Senha"
-                         
-                        
                     />
-                    <a href="/requestreset" className= 'PasswordReset' > Esqueceu a senha? </a>
+                    <a href="/requestreset/dev" className= 'PasswordReset' > Esqueceu a senha? </a>
                 <footer>
                 <button  type="submit">Entrar</button>
-                <a href="/registerform" className= 'RegisterLink' >  Registre-se </a>
+                <a href="/cadastro/dev" className= 'RegisterLink' >  Registre-se </a>
                 </footer>
                 
                 </fieldset>

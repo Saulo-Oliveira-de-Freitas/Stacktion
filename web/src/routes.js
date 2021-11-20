@@ -13,11 +13,11 @@ function Routes() {
         <BrowserRouter>
             <Route path="/" exact component={Landing} />
             <Route path="/devlist" component={DevList} />
-            <Route path="/registerform" component={DevForm} />
-            <Route path="/login"  component={LoginPage} />
-            <Route path="/requestreset"  component={RequestResetPage}/>
-            <Route path="/resetcode"  component={ResetCode}/> 
-            <Route path="/passwordreset"  component={PasswordReset}/> 
+            <Route path="/cadastro/dev" component={DevForm} />
+            <Route path="/login/dev"  component={LoginPage} />
+            <Route path="/requestreset/dev"  component={RequestResetPage}/>
+            <Route path="/resetcode/dev"  component={ResetCode}/> 
+            <Route path="/passwordreset/dev"  component={PasswordReset}/> 
         </BrowserRouter>
     );
 }

@@ -4,6 +4,8 @@ const ProjetoController = require('../controllers/ProjetoController')
 
 const router = Router()
 
+router.post('/projetos',ProjetoController.createProjetos)
+
 router.get('/projetos/:id', ProjetoController.selectOneProjetos)
 
 router.get('/projetos/:id', ProjetoController.selectAllProjetos)

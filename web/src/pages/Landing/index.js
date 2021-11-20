@@ -40,7 +40,7 @@ function Landing() {
                     <Link to="/devlist" className="study">
                         Quero Contratar
                     </Link>
-                    <Link to="/login" className="give-classes">
+                    <Link to="/login/dev" className="give-classes">
                         Quero Trabalhar
                     </Link>
                 </div>

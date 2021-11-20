@@ -4,13 +4,13 @@ const jwt = require('jsonwebtoken')
 
 
 
-class LoginController {
+class LoginControl {
 
     static login(req, res, next){
         const {email, senha} = req.body
-        database.devs.findOne({where:{email: email}})
+        database.users.findOne({where:{email: email}})
                 .then( user => {
-                 LoginController.checkSenha(senha, user.senha).then((senhaValidada) => {
+                 LoginControl.checkSenha(senha, user.senha).then((senhaValidada) => {
                     if(senhaValidada){
                         const token = jwt.sign({sub:user.username}, 'notasecret', {expiresIn: 3600});
                         const body = {
@@ -44,4 +44,4 @@ class LoginController {
 }
 
 
-module.exports = LoginController
+module.exports = LoginControl

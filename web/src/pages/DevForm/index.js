@@ -1,5 +1,5 @@
 import React, {useState, FormEvent} from 'react';
-import {useHistory} from 'react-router-dom';
+import {Link, useHistory} from 'react-router-dom';
 
 import PageHeader from '../../components/PageHeader';
 import Input from '../../components/Input';
@@ -26,7 +26,7 @@ function DevForm() {
     function handleCreateClass(e) {
         e.preventDefault();
 
-        api.post('classes', {
+        api.post('cadastro/dev', {
             nome,
             email,
             senha,
@@ -35,9 +35,11 @@ function DevForm() {
             valor: Number(valor),
             
         }).then(() => {
-            alert('Cadastro realizado com sucesso!');
-
             history.push('/');
+            return <Link to="/sucess"/>
+            
+
+            
         }).catch(() => {
             alert('Erro no cadastro!');
         })

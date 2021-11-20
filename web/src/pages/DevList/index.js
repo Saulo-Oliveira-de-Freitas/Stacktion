@@ -20,7 +20,7 @@ function DevList() {
     async function searchDev(e) {
         e.preventDefault();
 
-        const response = await api.get('devs', {
+        const response = await api.get('dev', {
             params: {
                 categoria,
                 skillName,
@@ -101,7 +101,7 @@ function DevList() {
                         {value: '2', label: 'Senior'}]}
                     />
 
-                    <button onclick ={searchDev}type="submit">
+                    <button  type="submit">
                         Buscar
                     </button>
                 </form>

@@ -25,7 +25,7 @@ class ProjetoController{
     static async createProjetos(req, res){
         const newProjeto = req.body
         try {
-            const newProjetoCreated = await database.clientes.create(newProjeto)
+            const newProjetoCreated = await database.projetos.create(newProjeto)
             return res.status(200).json(newProjetoCreated)
             
         }
