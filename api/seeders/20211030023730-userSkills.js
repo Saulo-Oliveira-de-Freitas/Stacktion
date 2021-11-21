@@ -4,61 +4,46 @@ module.exports = {
   up: async (queryInterface, Sequelize) => {
      await queryInterface.bulkInsert('user_skills', [
     {
-      userId: 'danfreitas',
-      skillId: 'HTML',
-      nivel: 'junior',
+      userId: 'sauloFreitas',
+      skillId: 'HTML/CSS/JS',
+      nivel: 'Junior',
       createdAt: new Date(),
       updatedAt: new Date()    
     },
-
+    
     {
-      userId: 'danfreitas',
-      skillId: 'CSS',
-      nivel: 'senior',
+      userId: 'Pedro Novaes ',
+      skillId: 'React',
+      nivel: 'Junior',
       createdAt: new Date(),
       updatedAt: new Date()   
     },
 
     {
-      userId: 'saulinduamassa',
+      userId: 'Alberto Neves',
       skillId: 'Java',
-      nivel: 'senior',
+      nivel: 'Senior',
       createdAt: new Date(),
       updatedAt: new Date()   
     },
 
     {
-      userId: 'saulinduamassa',
+      userId: "Carlos Lacerda",
       skillId: 'Python',
-      nivel: 'senior',
+      nivel: 'Senior',
       createdAt: new Date(),
       updatedAt: new Date()   
     },
 
     {
-      userId: 'Tonio',
+      userId: 'Isa Silva',
       skillId: 'C#',
-      nivel: 'pleno',
+      nivel: 'Pleno',
       createdAt: new Date(),
       updatedAt: new Date()   
     },
 
-    {
-      userId: 'Tonio',
-      skillId: 'Java',
-      nivel: 'junior',
-      createdAt: new Date(),
-      updatedAt: new Date()  
-    },
-
-    {
-      userId: 'dunga',
-      skillId: 'CSS',
-      nivel: 'pleno',
-      createdAt: new Date(),
-      updatedAt: new Date()  
-    },
-
+    
   ],
    {});
   },

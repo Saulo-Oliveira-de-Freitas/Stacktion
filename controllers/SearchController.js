@@ -1,7 +1,7 @@
 import {Request, Response} from 'express';
 import db from '../models'
 
-export default class ClassesController {
+export default class SearchController {
     async index(request, response) {
         const filters = request.query;
 

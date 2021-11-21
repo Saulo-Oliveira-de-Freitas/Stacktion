@@ -8,7 +8,7 @@ class LoginController {
 
     static login(req, res, next){
         const {email, senha} = req.body
-        database.devs.findOne({where:{email: email}})
+        database.users.findOne({where:{email: email}})
                 .then( user => {
                  LoginController.checkSenha(senha, user.senha).then((senhaValidada) => {
                     if(senhaValidada){

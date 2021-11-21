@@ -14,6 +14,10 @@ module.exports = {
         allowNull: false,
         type: Sequelize.STRING
       },
+      tipo:{
+        allowNull: false,
+        type: Sequelize.STRING
+      },
       nome: {
         allowNull: false,
         type: Sequelize.STRING
@@ -31,14 +35,15 @@ module.exports = {
         allowNull: false,
         type: Sequelize.STRING
       },
-      linkedin: {
+      bio: {
         type: Sequelize.STRING
       },
-      ativo: {
+      valor: {
+        type: Sequelize.FLOAT,
         allowNull: false,
-        type: Sequelize.BOOLEAN
-      },
-      redefin: {
+      }
+      ,
+      resetSenha: {
         type: Sequelize.STRING
       },
       createdAt: {

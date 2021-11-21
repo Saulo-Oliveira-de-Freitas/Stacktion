@@ -13,6 +13,10 @@ module.exports = {
         type: Sequelize.STRING,
         primaryKey: true
       },
+       categoria: {
+        type: Sequelize.STRING,
+       
+      },
       createdAt: {
         allowNull: true,
         type: Sequelize.DATE

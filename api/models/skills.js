@@ -18,7 +18,8 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   skills.init({
-    skill: DataTypes.STRING
+    skill: DataTypes.STRING,
+    categoria: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'skills',
