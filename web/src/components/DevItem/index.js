@@ -8,10 +8,10 @@ import{api} from '../../services/api';
 
 
 
-const DevItem = ({users}) => {
+const DevItem = ({user}) => {
     function createNewConnection() {
         api.post('connections', {
-            userId: users.id
+            userId: user.id
         })
     }
 
@@ -19,18 +19,18 @@ const DevItem = ({users}) => {
         <article className="teacher-item">
             <header>
                 <div>
-                    <strong>{users.nome}</strong>
+                    <strong>{user.nome}</strong>
                     
                 </div>
             </header>
 
-            <p>{users.bio}</p>
+            <p>{user.bio}</p>
 
             <footer>
                 <p>
-                    Preço/hora <strong>R$ {users.valor}</strong> 
+                    Preço/hora <strong>R$ {user.valor}</strong> 
                 </p>
-                <a target="_black" onClick={createNewConnection} href={`https://wa.me/${users.telefone}`}>
+                <a target="_black" onClick={createNewConnection} href={`https://wa.me/${user.telefone}`}>
                     <img src={whatsappIcon} alt="icone"/>
                     Entrar em contato  
                 </a>

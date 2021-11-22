@@ -37,10 +37,10 @@ function Landing() {
                 />
 
                 <div className="buttons-container">
-                    <Link to="/devlist" className="study">
+                    <Link to="/busca" className="study">
                         Quero Contratar
                     </Link>
-                    <Link to="/login/dev" className="give-classes">
+                    <Link to="/login" className="give-classes">
                         Quero Trabalhar
                     </Link>
                 </div>

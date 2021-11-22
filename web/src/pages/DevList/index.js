@@ -17,15 +17,18 @@ function DevList({url}) {
     const [categoria, setCategoria] = useState('');
     const [nivel, setNivel] = useState('');
     
-    useEffect((url)=>{
+    useEffect(()=>{
         busca(url,setUsers)
     },[])
     
+    useEffect(()=>{
+        console.log(users)
+    },[users])
 
     async function searchDev(e) {
         e.preventDefault();
 
-        const response = await api.get('buscauser', {
+        const response = await api.get('busca/user', {
             params: {
                 categoria,
                 skill,
@@ -99,7 +102,7 @@ function DevList({url}) {
             <main>
             
                 {users.map((user) => {
-                    return <DevItem key={users.id} user={user} />
+                    return <DevItem key={user.id} user={user} />
                 })}
             </main>
         </div>

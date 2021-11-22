@@ -4,7 +4,7 @@ module.exports = {
   up: async (queryInterface, Sequelize) => {
      await queryInterface.bulkInsert('user_skills', [
     {
-      userId: 'sauloFreitas',
+      userId: 'saulo Freitas',
       skillId: 'HTML/CSS/JS',
       nivel: 'Junior',
       createdAt: new Date(),

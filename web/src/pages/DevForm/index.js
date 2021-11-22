@@ -26,7 +26,7 @@ function DevForm() {
     function handleCreateClass(e) {
         e.preventDefault();
 
-        api.post('cadastro/dev', {
+        api.post('cadastro', {
             nome,
             email,
             senha,
@@ -36,7 +36,7 @@ function DevForm() {
             
         }).then(() => {
             history.push('/');
-            return <Link to="/sucess"/>
+            alert('cadastro concluído!');
             
 
             
@@ -118,7 +118,9 @@ function DevForm() {
                             Importante! <br />
                             Preencha todos os dados
                         </p>
-                        <button type="submit" >Salvar cadastro</button>
+                        
+                        <button type="submit" > Salvar cadastro  </button>
+                        
                     </footer>
                 </form>
             </main>
