@@ -5,7 +5,7 @@ import PageHeader from '../../components/PageHeader';
 import Input from '../../components/Input';
 import Textarea from '../../components/TextArea';
 
-import api from '../../services/api';
+import {api} from '../../services/api';
 
 import warningIcon from '../../assets/images/icons/warning.svg'
 

@@ -1,7 +1,15 @@
 import axios from 'axios';
 
-const api = axios.create({
+
+export const api = axios.create({
     baseURL: 'http://localhost:3333'
 })
 
-export default api;
+export const busca = async(url,setData) => {
+    const response = await api.get(url)
+    setData(response.data)
+}
+
+
+
+
