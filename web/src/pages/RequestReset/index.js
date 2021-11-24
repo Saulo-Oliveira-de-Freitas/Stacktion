@@ -3,7 +3,7 @@ import axios from 'axios';
 import PageHeader from '../../components/PageHeader';
 import Input from '../../components/Input';
 import api from '../../services/api';
-
+import {Link} from 'react-router-dom'
 import './styles.css';
 
 function RequestResetPage() {
@@ -28,9 +28,9 @@ function RequestResetPage() {
                     
                        
                     /> 
-                   
+                        <Link to="/resetcode">
                         <button className="FormButton" type="submit"> Recuperar Senha </button> 
-                        
+                        </Link>
                 </fieldset>
                   
                

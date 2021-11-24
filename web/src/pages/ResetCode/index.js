@@ -3,7 +3,7 @@ import axios from 'axios';
 import PageHeader from '../../components/PageHeader';
 import Input from '../../components/Input';
 import api from '../../services/api';
-
+import {Link} from 'react-router-dom'
 import './styles.css';
 
 function ResetCode() {
@@ -27,9 +27,9 @@ function ResetCode() {
                     
                        
                     /> 
-                   
+                        <Link to="/passwordreset">
                         <button className="FormButton" type="submit"> Confirmar Código </button> 
-                        
+                        </Link>
                 </fieldset>
                   
                

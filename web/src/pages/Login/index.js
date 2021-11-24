@@ -1,6 +1,6 @@
 import React, {useState, } from 'react';
 import axios from 'axios';
-
+import {Link} from 'react-router-dom'
 import PageHeader from '../../components/PageHeader';
 import Input from '../../components/Input';
 
@@ -34,7 +34,7 @@ function LoginPage() {
                         name="senha" 
                         label="Senha"
                     />
-                    <a href="/requestreset/dev" className= 'PasswordReset' > Esqueceu a senha? </a>
+                    <Link to="/requestreset/" className= 'PasswordReset' > Esqueceu a senha? </Link>
                 <footer>
                 <button  type="submit">Entrar</button>
                 <a href="/cadastro/dev" className= 'RegisterLink' >  Registre-se </a>

@@ -13,17 +13,17 @@ import './styles.css';
 
 function DevList({url}) {
     const [users, setUsers] = useState([])
-    const [skill, setSkill] = useState('');
+    const [skill, setSkill] = useState([]);
     const [categoria, setCategoria] = useState('');
     const [nivel, setNivel] = useState('');
     
+
+
     useEffect(()=>{
         busca(url,setUsers)
     },[])
     
-    useEffect(()=>{
-        console.log(users)
-    },[users])
+    
 
     async function searchDev(e) {
         e.preventDefault();
@@ -32,7 +32,7 @@ function DevList({url}) {
             params: {
                 categoria,
                 skill,
-                
+                nivel
             }
         });
 

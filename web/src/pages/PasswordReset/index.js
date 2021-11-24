@@ -1,6 +1,6 @@
 import React, {useState, } from 'react';
 import axios from 'axios';
-
+import {Link} from 'react-router-dom'
 import PageHeader from '../../components/PageHeader';
 import Input from '../../components/Input';
 
@@ -36,8 +36,9 @@ function PasswordReset() {
                         name="senhaConfirma" 
                         label="Confirme a nova senha"
                     />
+                    <Link to="/login">
                     <button  type="submit">Concluir</button> 
-               
+                    </Link>
                 
                 </fieldset>
             </form>
