@@ -18,7 +18,10 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   skills.init({
-    skill: DataTypes.STRING,
+    skill: { 
+      type: DataTypes.STRING,
+      primaryKey: true
+    },
     categoria: DataTypes.STRING
   }, {
     sequelize,
