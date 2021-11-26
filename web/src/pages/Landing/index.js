@@ -7,23 +7,16 @@ import heroImg from '../../assets/images/heroImg.svg';
 
 import purpleHeartIcon from '../../assets/images/icons/purple-heart.svg';
 
-import{ api} from '../../services/api';
+
 
 import './styles.css';
 
 function Landing() {
     const [totalConnnections, setTotalConnections] = useState(0);
 
-    useEffect(() => {
-        api.get('connections').then(response => {
-            const {total} = response.data;
-
-            setTotalConnections(total);
-        })
-    }, []);
-
+    
     return (
-        <div id="page-landing">
+        <div id="page-landing" >
             <div id="page-landing-content" className="container">
                 <div className="logo-container">
                     <h1>Stacktion</h1>

@@ -1,3 +1,5 @@
+
+
 #page-landing {
     width: 100vw;
     height: 100vh;
@@ -6,17 +8,14 @@
     justify-content: center;
     align-items: center;
 
-    color: var(--color-text-in-primary);
-    background: var(--color-primary);
+    color:  #082032;;
+    background-color: #082032;
 }
 
 .logo-container img {
     height: 10rem;
 }
 
-.hero-img {
-    width: 100%;
-}
 
 .logo-container {
     text-align: center;
@@ -61,7 +60,7 @@
 }
 
 .buttons-container a.study {
-    background: var(--color-secundary-dark);
+    background: var(--color-primary-darker);
 }
 
 .buttons-container a.give-classes {
@@ -72,7 +71,7 @@
 
 .total-connections {
     font-size: 1.4rem;
-
+    background-color: #082032;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -135,4 +134,53 @@
         grid-area: total;
         justify-self: end;
     }
+}
+
+@media(max-width: 1024px){
+    .container {
+        flex: 1;
+        justify-content:'center';
+        padding: 4rem;
+    }
+    .hero-img{
+        padding-top: 0px;
+        margin-top: 0px;
+        transform: scale(1)
+    }
+    .banner {
+        width: 100%;
+        size-adjust: contains
+    }
+
+    .title {
+        
+        color: #fff;
+        font-size: 1rem;
+        line-height: 3rem;
+        margin-top: 8rem;
+        padding-top: 12rem
+    }
+
+
+    .buttonsContainer {
+        flex-direction: row;
+        margin-top: 4rem;
+        justify-content: space-between;
+    }
+
+    button {
+        height: 15rem;
+        width: 48%;
+        border-radius: .8rem;
+        padding: 2.4rem;
+        justify-content: space-between;
+    }
+
+    .buttonText {
+        
+        color: #fff;
+        font-size: 2rem,
+    }
+
+
 }
