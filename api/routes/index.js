@@ -3,7 +3,7 @@ const busca = require('./busca.js');
 const cadastro = require('./cadastro.js');
 const perfil = require('./perfil.js');
 const login = require('./login.js');
-const admskill = require('./admSkills.js');
+const catalogoskill = require('./catalogoSkills.js');
 
 module.exports = app => {
 
@@ -11,7 +11,7 @@ module.exports = app => {
     app.use(cadastro)
     app.use(perfil)
     app.use(login)
-    app.use(admskill)
+    app.use(catalogoskill)
 
     app.get('/', (req, res) => res.send('Tela Inicial'))
 

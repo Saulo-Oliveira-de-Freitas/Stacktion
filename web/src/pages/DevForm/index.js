@@ -14,7 +14,7 @@ import './styles.css';
 function DevForm() {
     const history = useHistory();
 
-
+    const [users, setUsers] = useState([])
     const [nome, setNome] = useState('');
     const [email, setEmail] = useState('');
     const [senha, setSenha] = useState('');
@@ -26,13 +26,14 @@ function DevForm() {
     function handleCreateClass(e) {
         e.preventDefault();
 
-        api.post('cadastro', {
-            nome,
-            email,
-            senha,
-            telefone,
-            bio,
+        api.post('/cadastro', {
+            nome: nome,
+            email: email,
+            senha: senha,
+            telefone: telefone,
+            bio: bio,
             valor: Number(valor),
+            
             
         }).then(() => {
             history.push('/');
@@ -85,7 +86,7 @@ function DevForm() {
 
                         <Input 
                             name="telefone" 
-                            label="Telefone "
+                            label="Telefone (apenas números) "
                             value={telefone} 
                             onChange={(e) => {
                                 setTelefone(e.target.value)
@@ -119,7 +120,7 @@ function DevForm() {
                             Preencha todos os dados
                         </p>
                         
-                        <button type="submit" > Salvar cadastro  </button>
+                        <button onSubmit={handleCreateClass} type="submit" > Salvar cadastro  </button>
                         
                     </footer>
                 </form>
