@@ -14,7 +14,8 @@ import './styles.css';
 function DevForm() {
     const history = useHistory();
 
-    const [users, setUsers] = useState([])
+    const [user, setUser] = useState('')
+    const [tipo, setTipo] = useState('user')
     const [nome, setNome] = useState('');
     const [email, setEmail] = useState('');
     const [senha, setSenha] = useState('');
@@ -27,12 +28,16 @@ function DevForm() {
         e.preventDefault();
 
         api.post('/cadastro', {
+            user: user,
+            tipo: tipo,
             nome: nome,
             email: email,
             senha: senha,
             telefone: telefone,
             bio: bio,
             valor: Number(valor),
+            createdAt: new Date(),
+            updatedAt: new Date()
             
             
         }).then(() => {
@@ -57,6 +62,15 @@ function DevForm() {
                 <form onSubmit={handleCreateClass}>
                     <fieldset>
                         <legend>Seus dados</legend>
+
+                        <Input 
+                            name="user" 
+                            label="ID de usuário" 
+                            value={user} 
+                            onChange={(e) => {
+                                setUser(e.target.value)
+                            }} />
+
 
                         <Input 
                             name="nome" 

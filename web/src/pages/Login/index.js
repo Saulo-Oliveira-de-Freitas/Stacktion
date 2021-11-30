@@ -37,7 +37,7 @@ function LoginPage() {
                     <Link to="/requestreset/" className= 'PasswordReset' > Esqueceu a senha? </Link>
                 <footer>
                 <button  type="submit">Entrar</button>
-                <a href="/cadastro/dev" className= 'RegisterLink' >  Registre-se </a>
+                <Link to="/cadastro" className= 'RegisterLink' >  Registre-se </Link>
                 </footer>
                 
                 </fieldset>
