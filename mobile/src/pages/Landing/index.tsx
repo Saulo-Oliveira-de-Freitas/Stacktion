@@ -15,13 +15,6 @@ function Landing() {
     const { navigate } = useNavigation();
     const [totalConnectios, setTotalConnections] = useState(0);
 
-    useEffect(() => {
-        api.get('connections').then(response => {
-            const { total } = response.data;
-
-            setTotalConnections(total);
-        });
-    });
 
     function handleNavigateToGiveClassesPage() {
         navigate('GiveClasses');
@@ -44,9 +37,8 @@ function Landing() {
 
             <View style={styles.buttonsContainer}>
                 <RectButton onPress={handleNavigateToStudyPages} style={[styles.button, styles.buttonPrimary]}>
-                    <Image source={studyIcon} />
-
-                    <Text style={styles.buttonText}>Estudar</Text>
+                   
+                    <Text style={styles.buttonText}>Contratar</Text>
                 </RectButton>
 
                 <RectButton 
@@ -54,9 +46,7 @@ function Landing() {
                     style={[styles.button, styles.buttonSecondary]}
                 >
 
-                    <Image source={giveClassesIcon} />
-
-                    <Text style={styles.buttonText}>Dar aulas</Text>
+                    <Text style={styles.buttonText}>Trabalhar</Text>
                 </RectButton>
             </View>
 

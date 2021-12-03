@@ -3,7 +3,7 @@ import { StyleSheet } from 'react-native';
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#8257E5',
+        backgroundColor: '#082032',
         justifyContent: 'center',
         padding: 40,
     },
@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
 
     description: {
         marginTop: 24,
-        color: '#d4c2ff',
+        color: '#F0F0F7',
         fontSize: 16,
         lineHeight: 26,
         fontFamily: 'Poppins_400Regular',
@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
 
     okButton: {
         marginVertical: 40,
-        backgroundColor: '#04d361',
+        backgroundColor: '#FF4C29',
         height: 58,
         alignItems: 'center',
         justifyContent: 'center',
