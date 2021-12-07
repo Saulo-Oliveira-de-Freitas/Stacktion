@@ -12,11 +12,13 @@ function StudyTabs() {
         <Navigator
             screenOptions={{
                 style: {
+                    
                     elevation: 0,
                     shadowOpacity: 0,
                     height: 64,
                 },
                 tabStyle: {
+                    
                     flexDirection: 'row',
                     alignItems: 'center',
                     justifyContent: 'center',
@@ -28,23 +30,23 @@ function StudyTabs() {
                 },
                 labelStyle: {
                     fontFamily: 'Archivo_700Bold',
-                    fontSize: 13,
+                    fontSize: 14,
                     marginLeft: 16,
                 },
-                inactiveBackgroundColor: '#fafafc',
-                activeBackgroundColor: '#ebebf5',
-                inactiveTintColor: '#c1bccc',
-                activeTintColor: '#32264d',
+                inactiveBackgroundColor: '#334756',
+                activeBackgroundColor: '#082032',
+                inactiveTintColor: '#185ADB',
+                activeTintColor: '#FF4C29',
             }}
         >
             <Screen 
                 name="TeacherList" 
                 component={TeacherList} 
                 options={{
-                    tabBarLabel: 'Proffys',
+                    tabBarLabel: 'Catálogo',
                     tabBarIcon: ({ color, size, focused }) => {
                         return (
-                            <Ionicons name="ios-easel" size={size} color={focused ? '#8257e5' : color} />
+                            <Ionicons name="search" size={size} color={focused ? '#FF4C29' : color}  />
                         );
                     }
                 }}
@@ -56,7 +58,7 @@ function StudyTabs() {
                     tabBarLabel: 'Favoritos',
                     tabBarIcon: ({ color, size, focused }) => {
                         return (
-                            <Ionicons name="ios-heart" size={size} color={focused ? '#8257e5' : color} />
+                            <Ionicons name="ios-heart" size={size} color={focused ? '#FF4C29' : color} />
                         );
                     }
                 }}

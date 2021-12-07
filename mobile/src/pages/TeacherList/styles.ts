@@ -4,7 +4,7 @@ import TeacherList from '.';
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#f0f0f7'
+        backgroundColor: '#2C394B'
     },
 
     teacherList: {
@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
     },
 
     label: {
-        color: '#d4c2ff',
+        color: '#F0F0F7',
         fontFamily: 'Poppins_400Regular',
     },
 
@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
     },
 
     submitButton: {
-        backgroundColor: '#04d361',
+        backgroundColor: '#185ADB',
         height: 56,
         borderRadius: 8,
         flexDirection: 'row',

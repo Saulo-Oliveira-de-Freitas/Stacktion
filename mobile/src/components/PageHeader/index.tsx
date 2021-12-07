@@ -27,7 +27,7 @@ const PageHeader: React.FC<PageHeaderProps> = ({ title, headerRight, children })
                     <Image source={backIcon} resizeMode="contain" />
                 </BorderlessButton>
 
-                <Image source={logoImg} resizeMode="contain" />
+                <Text style={styles.Text}> Stacktion</Text>
             </View>
             
             <View style={styles.header}>

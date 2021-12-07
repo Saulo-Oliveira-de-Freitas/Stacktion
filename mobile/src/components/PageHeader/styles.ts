@@ -3,7 +3,7 @@ import { StyleSheet } from "react-native";
 const styles = StyleSheet.create({
     container: {
         padding: 40,
-        backgroundColor: '#8525e5',
+        backgroundColor: '#082032',
     },
 
     topBar: {
@@ -26,6 +26,8 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'space-between'
     },
+
+    Text: {color: 'white'}
 })
 
 export default styles;
