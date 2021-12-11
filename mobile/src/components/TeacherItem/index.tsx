@@ -8,7 +8,7 @@ import unfavoriteIcon from '../../assets/images/icons/unfavorite.png';
 import whatsappIcon from '../../assets/images/icons/whatsapp.png';
 
 import styles from './styles';
-import api from '../../services/api';
+import{ api} from '../../services/api';
 
 export interface Teacher {
     id: number,

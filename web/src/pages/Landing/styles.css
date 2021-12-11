@@ -117,6 +117,7 @@
     }
 
     .hero-img {
+        transform: scale(.9);
         grid-area: hero;
         justify-self: end;
     }
