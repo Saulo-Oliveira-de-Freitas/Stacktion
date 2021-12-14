@@ -7,7 +7,7 @@ import LoginPage from './pages/Login';
 import RequestResetPage from './pages/RequestReset'
 import ResetCode from './pages/ResetCode'
 import PasswordReset from './pages/PasswordReset'
-import ProfilePage from './pages/Login';
+import ProfilePage from './pages/ProfilePage';
 function Routes() {
     return (
         <BrowserRouter>
@@ -18,7 +18,7 @@ function Routes() {
             <Route path="/requestreset"  component={RequestResetPage}/>
             <Route path="/resetcode"  component={ResetCode}/> 
             <Route path="/passwordreset"  component={PasswordReset}/> 
-            <Route path="/profile" exact component={ProfilePage}/> 
+            <Route path="/profile" component={ProfilePage}/> 
         </BrowserRouter>
     );
 }
